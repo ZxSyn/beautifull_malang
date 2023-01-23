@@ -1,0 +1,546 @@
+*{
+    font-family: "Josefin Sans", sans-serif;
+    padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	scroll-behavior: smooth;
+}
+
+/* :root{
+	--bg-color: #fff;
+	--text-color: #221314;
+	--second-color: #5a7184;
+	--main-color: #6e54fa;
+	--big-font: 5rem;
+	--h2-font: 3rem;
+	--p-font: 1.1rem;
+} */
+
+body{
+	background: white;
+	color: #f9f9f9;
+}
+
+header{
+	position: sticky;
+	top: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: black;
+	padding: 30px 5%;
+	/* transition: ease .40s; */
+	/* max-width:1200px; */
+}
+
+.logo{
+	/* font-family:"Limelight", sans-serif; */
+	font-size: 42px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: white;
+}
+
+.navbar{
+	display: flex;
+}
+
+.navbar a{
+	color: white;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 10px 25px;
+	border-radius: 4px;
+	transition: ease .40s;
+}
+.navbar a:hover{
+	/* opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1); */
+	/* background: white; */
+	color: black;
+	/* box-shadow: 5px 10px 30px rgb(85 85 85 / 20%); */
+	text-decoration: none;
+	animation: linear;
+	border-radius: 4px;
+}
+
+#menu-icon{
+	color: ;
+	font-size: 35px;
+	z-index: 10001;
+	cursor: pointer;
+	display: none;
+}
+
+header.sticky{
+	background: #163253;
+	padding: 10px 18%;
+	box-shadow: rgba(33,35,38, 0.1) 0px 10px 10px -10px;
+}
+.sticky .logo{
+	color: #163253;
+}
+.sticky .navbar a{
+	color: #163253;
+} 
+
+
+section{
+	padding: 80px 18%;
+}
+
+.hero{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: url(../assets/bg-tugu.png);
+	background-color:rgba(0,0,0, 0.4);
+	background-blend-mode: multiply;
+	background-size: cover;
+	background-position: center;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	align-items: center;
+	justify-content: center;
+}
+
+.title h1{
+	font-size: 68px;
+	line-height: 1.1;
+	color: #fff;
+	font-family: 'Josefin Sans', sans-serif;
+	letter-spacing: 4px;
+	margin-bottom: 20px;
+	/* align-items: center; */
+	/* justify-content: center; */
+	alignment: center;
+	text-align: center;
+}
+
+.title p{
+	color: #eee;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 38px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+form{
+	position: absolute;
+	top: 500px;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+.search-bar{
+	width: 100%;
+	max-width: 500px;
+	background: #fff;
+	align-items: center;
+	border-radius: 50px;
+	padding: 5px 5px;
+	display:flex;
+}
+
+.search-bar input{
+	background: transparent;
+	flex:1;
+	border:0;
+	outline:none;
+	padding: 5px 25px;
+	font-size: 20px;
+	color: #000;
+}
+
+::placeholder {
+	color: #1e1e1e;
+}
+
+.search-bar button i{
+	width: 30px;
+	color: #2286FC;
+}
+
+.search-bar button{
+	border:0;
+	border-radius:50px;
+	width: 60px;
+	height: 60px;
+	background-color:  #f5f5f5 !important;
+	cursor: pointer;
+}
+
+.tours{
+	position: relative;
+	width: 100%;
+	/* height: 100vh; */
+	/* background: url(../assets/bg-tugu.png); */
+	background-color: #f9f9f9;
+	background-blend-mode: screen;
+	/* background-size: cover;
+	background-position: center; */
+	display: grid;
+	/* grid-template-columns: repeat(1, 1fr); */
+	align-items: center;
+	padding: 120px 5% 60px;
+}
+
+.tours h3{
+	font-family:"Josefin Sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 43px;
+	letter-spacing: 0.05em;
+	color: #1E1E1E;
+	padding-bottom: 25px;
+}
+
+.tours h2{
+	font-family: 'Josefin Sans';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 54px;
+	color: #252525;
+}
+
+.container{
+	align-items: center;
+}
+
+.row-1{
+	display:flex;
+}
+
+.row-1 .col-left {
+	max-width:25%;
+	padding-top: 40px;
+}
+
+.row-1 .col-right {
+	max-width:75%;
+	position: relative;
+}
+
+.row-1 .col-right img{
+	width: 1006px;
+    height: auto;
+    padding-left: 70px;
+	display: block;
+}
+
+.row-1 .col-right .overlay{
+	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 70px;
+	right: 0;
+  	height: 100%;
+  	width: 936px;
+  	opacity: 0;
+  	transition: .5s ease;
+  	background-color: rgba(0,0,0, 0.4)
+	
+}
+
+.row-1 .col-right:hover .overlay {
+	opacity: 1;
+	padding-left: 70px;
+  }
+
+.text {
+	color: white;
+	font-size: 32px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.row-2{
+	display:flex;
+	padding-top:35px;
+}
+
+.row-2 .col-left {
+	max-width:50%;
+	position: relative;
+}
+.row-2 .col-right {
+	max-width:50%;
+	padding-left:35px;
+	position: relative;
+}
+
+.row-2 img{
+	display: block;
+}
+
+.row-2 .col-right .overlay{
+	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 35px;
+	right: 0;
+  	height: 100%;
+  	width: 590px;
+  	opacity: 0;
+  	transition: .5s ease;
+  	background-color: rgba(0,0,0, 0.4);
+}
+
+.row-2 .col-left .overlay{
+	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0px;
+	right: 0;
+  	height: 100%;
+  	width: 590px;
+  	opacity: 0;
+  	transition: .5s ease;
+  	background-color: rgba(0,0,0, 0.4)
+}
+
+.row-2 .col-left:hover .overlay {
+	opacity: 1;
+	/* padding-left: 70px; */
+}
+
+.row-2 .col-right:hover .overlay {
+	opacity: 1;
+	/* padding-left: 70px; */
+}
+
+.destination{
+	position: relative;
+	width: 100%;
+	/* height: 100vh; */
+	/* background: url(../assets/bg-tugu.png); */
+	background-color: #f9f9f9;
+	background-blend-mode: screen;
+	/* background-size: cover;
+	background-position: center; */
+	display: grid;
+	/* grid-template-columns: repeat(1, 1fr); */
+	align-items: center;
+	padding: 60px 5%;
+}
+
+.destination .sub{
+	font-family: 'Josefin Sans', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 43px;
+	letter-spacing: 0.05em;
+	color: #1E1E1E;
+	text-align: center;
+	padding-bottom:25px;
+}
+
+.destination .titles {
+	font-family: 'Josefin Sans';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 54px;
+	color: #252525;
+	padding-bottom:20px;
+	text-align: center;
+}
+
+.destination h4{
+	font-family: 'Josefin Sans', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 35px;
+	/* identical to box height, or 109% */
+	letter-spacing: 0.39em;
+	color: #252525;
+	padding-bottom: 15px;
+}
+
+.destination p{
+	font-family: 'Josefin Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 26px;
+	color: #1E1E1E;
+	padding-bottom:15px;
+}
+
+.destination .container .row-1 .col-left{
+	max-width: 65%;
+}
+
+.destination .container .row-1 .col-right{
+	max-width: 35%;
+    padding-top: 80px;
+    padding-left: 40px;
+}
+
+.destination .container a button{
+	padding: 15px 30px;
+    border-radius: 50px;
+    border: 1px;
+	font-size:18px;
+}
+
+.destination .container .row-3{
+	display: flex;
+}
+
+.destination .container .row-2{
+	padding: 0px;
+}
+
+.destination .container .row-2 .col-right{
+	max-width: 65%;
+	padding-top: 40px;
+	padding-left: 50px
+}
+
+.destination .container .row-2 .col-left{
+	max-width: 55%;
+    padding-top: 80px;
+    padding-left: 40px;
+}
+.destination .container .row-3 .col-left{
+	max-width: 65%;
+	padding-top: 40px
+}
+
+.destination .container .row-3 .col-right{
+	max-width: 55%;
+    padding-top: 80px;
+    padding-left: 40px;
+}
+
+.testi{
+	position: relative;
+	width: 100%;
+	/* height: 100vh; */
+	/* background: url(../assets/bg-tugu.png); */
+	background-color: #f9f9f9;
+	background-blend-mode: screen;
+	/* background-size: cover;
+	background-position: center; */
+	display: flex;
+	flex-direction: row;
+	/* grid-template-columns: repeat(1, 1fr); */
+	align-items: center;
+	padding: 60px 5%;
+	overflow: hidden;
+}
+
+.testi h3{
+	font-family:"Josefin Sans",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 43px;
+	letter-spacing: 0.05em;
+	color: #1E1E1E;
+	padding-bottom: 25px;
+}
+
+.testi h2{
+	font-family: 'Josefin Sans';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 54px;
+	color: #252525;
+}
+
+.testi .column-1{
+	/* max-width:45%; */
+	display:flex;
+}
+
+.testi .column-2{
+	/* max-width:55% */
+	margin-top: -450px;
+	padding-left: 35px;
+}
+
+.swiper {
+	position: absolute;
+    background: white;
+    height: 250px;
+    width: 675px;
+    left: -115px;
+    top: 403px;
+	margin-top: -360px;
+	overflow: visible;
+}
+.swiper-button-next, .swiper-button-prev{
+	display: none;
+}
+.swiper-slide{
+	color: #000000;
+	text-align: center;
+	font-size: 24px;
+	padding-top: 100px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.cta{
+	position: relative;
+	width: 100%;
+	/* height: 100vh; */
+	background: url(../assets/bg-tugu.png);
+	background-color:rgba(0,0,0, 0.4);
+	background-blend-mode: multiply;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	grid-template-columns: repeat(1, 1fr);
+	/* align-items: center; */
+	justify-content: center;
+	align-items: center;
+	padding: 60px 5%;
+	overflow: hidden;
+}
+
+.cta h1{
+	font-family: 'Josefin Sans', sans-serif;
+	font-style: italic;
+	font-weight: 900;
+	font-size: 128px;
+	line-height: 154px;
+	letter-spacing: 0.05em;
+	color: #fff;
+}
+
+.cta a{
+	/* position: absolute; */
+	/* top: 500px; */
+	/* left: 50%; */
+	/* margin-right: -50%; */
+	/* padding-left: 50%;
+	padding-right: 50%; */
+	transform: translate(-50%, -50%);
+}
+
+.cta a button{
+	padding: 15px 25px;
+    border-radius: 50px;
+    border: 1px;
+	font-size:22px;
+}
